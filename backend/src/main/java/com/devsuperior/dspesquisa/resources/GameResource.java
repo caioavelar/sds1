@@ -16,11 +16,11 @@ import com.devsuperior.dspesquisa.services.GameService;
 public class GameResource {
 	
 	@Autowired
-	private GameService gameService;
+	private GameService service;
 	
 	@GetMapping
 	public ResponseEntity<List<GameDTO>> findAll() {
-		List<GameDTO> list = gameService.findAll();
+		List<GameDTO> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 }
